@@ -4,22 +4,22 @@ const allvideos = await getCollection("video");
 
 const { count } = Astro.props;
 
-function parseDate(dateStr) {
-    const [month, day, year] = dateStr.split(" ");
-    return new Date(`${month} ${parseInt(day)}, ${year}`);
+function parseDate(dateStr: string) {
+	const [month, day, year] = dateStr.split(" ");
+	return new Date(`${month} ${Number.parseInt(day)}, ${year}`);
 }
 
 const sortedvideos = allvideos
-    .map((video) => ({
-        ...video,
-        date: parseDate(video.data.dateFormatted),
-    }))
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
+	.map((video) => ({
+		...video,
+		date: parseDate(video.data.dateFormatted),
+	}))
+	.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 const videosLoop = sortedvideos.slice(0, count).map((video) => {
-    return {
-        ...(video.data || {}),
-    };
+	return {
+		...(video.data || {}),
+	};
 });
 ---
 

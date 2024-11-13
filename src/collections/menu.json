@@ -1,14 +1,14 @@
 [
-    {
-        "name": "Inicio",
-        "url": "/"
-    },
-    {
-        "name": "Proyectos",
-        "url": "/projects"
-    },
-    {
-        "name": "Sobre mí",
-        "url": "/about"
-    }
+	{
+		"name": "Inicio",
+		"url": "/"
+	},
+	{
+		"name": "Proyectos",
+		"url": "/projects"
+	},
+	{
+		"name": "Sobre mí",
+		"url": "/about"
+	}
 ]
