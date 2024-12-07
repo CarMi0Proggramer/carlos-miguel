@@ -1,32 +1,38 @@
 [
-	{
-		"name": "GotoSend",
-		"description": "Sitio web de envío de recargas y remesas a Cuba.",
-		"image": "/assets/images/projects/gotosend.png",
-		"url": "https://gotosend.com"
-	},
-	{
-		"name": "D-Kanto",
-		"description": "Comercio electrónico (E-commerce).",
-		"image": "/assets/images/projects/d-kanto.png",
-		"url": "https://d-kanto.onrender.com"
-	},
-	{
-		"name": "D-Kanto Admins",
-		"description": "Dashboard de Administración.",
-		"image": "/assets/images/projects/d-kanto-admin.png",
-		"url": "https://d-kanto-admin.onrender.com"
-	},
-	{
-		"name": "Astro Portfolio Landing",
-		"description": "Portafolio web minimalista construido con Astro.",
-		"image": "/assets/images/projects/astro-portfolio-landing.png",
-		"url": "https://astro-portfolio-landing.vercel.app"
-	},
-	{
-		"name": "Programmers Chat",
-		"description": "Aplicación de chat para programadores.",
-		"image": "/assets/images/projects/programmers-chat.png",
-		"url": "https://programmers-chat.onrender.com/"
-	}
+  {
+    "name": "Amazon Redesign Thinking",
+    "description": "Clon de Amazon, creado para un tutorial en mi canal de YouTube.",
+    "image": "/assets/images/projects/amazon-redesign-thinking.png",
+    "url": "https://amazon-front-gamma.vercel.app/"
+  },
+  {
+    "name": "GotoSend",
+    "description": "Sitio web de envío de recargas y remesas a Cuba.",
+    "image": "/assets/images/projects/gotosend.png",
+    "url": "https://gotosend.com"
+  },
+  {
+    "name": "D-Kanto",
+    "description": "Comercio electrónico (E-commerce).",
+    "image": "/assets/images/projects/d-kanto.png",
+    "url": "https://d-kanto.onrender.com"
+  },
+  {
+    "name": "D-Kanto Admins",
+    "description": "Dashboard de Administración.",
+    "image": "/assets/images/projects/d-kanto-admin.png",
+    "url": "https://d-kanto-admin.onrender.com"
+  },
+  {
+    "name": "Astro Portfolio Landing",
+    "description": "Portafolio web minimalista construido con Astro.",
+    "image": "/assets/images/projects/astro-portfolio-landing.png",
+    "url": "https://astro-portfolio-landing.vercel.app"
+  },
+  {
+    "name": "Programmers Chat",
+    "description": "Aplicación de chat para programadores.",
+    "image": "/assets/images/projects/programmers-chat.png",
+    "url": "https://programmers-chat.onrender.com/"
+  }
 ]
