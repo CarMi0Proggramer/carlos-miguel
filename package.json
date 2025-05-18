@@ -11,8 +11,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"astro": "^5.7.13",
-		"typescript": "^5.8.3"
+		"astro": "^5.7.13"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.7",
