@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-const allvideos = await getCollection("video");
+const videos = await getCollection("video");
 
 const { count } = Astro.props;
 
@@ -9,14 +9,14 @@ function parseDate(dateStr: string) {
   return new Date(`${month} ${Number.parseInt(day)}, ${year}`);
 }
 
-const sortedvideos = allvideos
+const sortedVideos = videos
   .map((video) => ({
     ...video,
     date: parseDate(video.data.dateFormatted),
   }))
   .sort((a, b) => b.date.getTime() - a.date.getTime());
 
-const videosLoop = sortedvideos.slice(0, count).map((video) => {
+const videosLoop = sortedVideos.slice(0, count).map((video) => {
   return {
     ...(video.data || {}),
   };

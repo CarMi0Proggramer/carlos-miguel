@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 200 700;
+	font-display: block;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-inter: "Inter", "sans-serif";
+}
