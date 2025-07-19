@@ -1,0 +1,18 @@
+---
+import { COLORS } from "../../constants";
+
+interface Props {
+	id?: string;
+	text: string;
+	color: Color;
+}
+
+const { text, id, color } = Astro.props;
+
+const className = `inline-flex items-center w-fit px-4 py-2 text-xs font-semibold duration-300 ease-out border rounded-md ${COLORS[color].join(" ")}`;
+---
+
+<button type="button" id={id} class={className}>
+	{text}
+	<slot name="icon" />
+</button>

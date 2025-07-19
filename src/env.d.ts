@@ -1,2 +1,1 @@
-/// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
+type Color = "neutral" | "blue" | "red" | "yellow" | "green";

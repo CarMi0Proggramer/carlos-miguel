@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function setupListeners() {
 	const menu = document.getElementById("menu") as HTMLElement;
 	const menuBackground = document.getElementById(
 		"mobileMenuBackground",
@@ -155,4 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	calcHeaderPosition();
 	window.addEventListener("scroll", calcHeaderPosition);
-});
+}
+
+document.addEventListener("DOMContentLoaded", setupListeners);
+document.addEventListener("astro:after-swap", setupListeners);

@@ -1,0 +1,30 @@
+---
+import Button from "../buttons/Button.astro";
+import SocialLinks from "../SocialLinks.astro";
+---
+
+<section class="px-7 lg:px-0 md:mt-7">
+  <div
+    class="flex justify-between text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
+  >
+    <h2>Contacto</h2>
+    <Button color="green" text="Disponible" />
+  </div>
+  <p class="mt-4 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
+    No dudes en ponerte en contacto si estás buscando un desarrollador, tienes
+    alguna pregunta o simplemente quieres conectar. Puede que pueda aceptar
+    nuevos proyectos dependiendo de mi disponibilidad (indicador en la parte
+    superior derecha).
+  </p>
+  <div class="mt-4">
+    <a
+      class="text-neutral-900 dark:text-white text-base underline"
+      href="mailto:carlosmiguel.dev06@gmail.com"
+    >
+      carlosmiguel.dev06@gmail.com
+    </a>
+  </div>
+  <div class="mt-4">
+    <SocialLinks />
+  </div>
+</section>

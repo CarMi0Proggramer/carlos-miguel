@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import services from "../../assets/collections/services.json";
+import Card from "../Card.astro";
+---
+
+<section class="px-7 lg:px-0">
+  <div
+    class="flex justify-between text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
+  >
+    <h2>Mis Servicios</h2>
+    <span>$4/hora</span>
+  </div>
+  <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
+    Soy un especialista en crear arquitecturas backend robustas, con amplia
+    experiencia en frontend y DevOps. Transformo ideas en sistemas escalables y
+    eficientes, combinando código limpio con las mejores prácticas de la
+    industria.
+  </p>
+  <div class="grid w-full grid-cols-1 gap-7 mt-8 text-pretty">
+    {
+      services.map(({ title, description, technologies }) => (
+        <Card>
+          <h2 class="text-lg font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">
+            {title}
+          </h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-400">
+            {description}
+          </p>
+          <div class="mt-3 flex flex-wrap gap-3">
+            {technologies.map(({ url, name, darkUrl }) => (
+              <div class="inline-flex items-center gap-2 rounded bg-white dark:bg-neutral-950 p-2">
+                <Image
+                  width={64}
+                  height={64}
+                  src={url}
+                  alt={name}
+                  class={`object-contain object-center size-5 ${darkUrl ? "dark:hidden" : ""}`}
+                />
+                {darkUrl && (
+                  <Image
+                    width={64}
+                    height={64}
+                    src={darkUrl}
+                    alt={name}
+                    class="hidden dark:block object-contain object-center size-5"
+                  />
+                )}
+                <span class="font-semibold text-sm dark:text-white">
+                  {name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </Card>
+      ))
+    }
+  </div>
+</section>

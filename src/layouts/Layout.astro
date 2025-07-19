@@ -1,14 +1,10 @@
 ---
-import "../styles/global.css";
-import Footer from "../components/Footer.astro";
+import "../assets/styles/global.css";
+import "../assets/styles/main.css";
+import { SEO } from "astro-seo";
+import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 import SquareLines from "../components/SquareLines.astro";
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,60 +13,26 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <SEO
+      title="Carlos Miguel | Desarrollador Web FullStack"
+      canonical={Astro.url.href}
+    />
+    <ClientRouter />
 
     <!-- Used to add dark mode right away, adding here prevents any flicker -->
     <script is:inline>
-      if (typeof Storage !== "undefined") {
-        if (
-          localStorage.getItem("dark_mode") &&
-          localStorage.getItem("dark_mode") == "true"
-        ) {
-          document.documentElement.classList.add("dark");
-        }
+      if (localStorage.getItem("darkMode") == "true") {
+        document.documentElement.classList.add("dark");
       }
     </script>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
-    <script src="../assets/css/main.css"></script>
-
-    <title>Carlos Miguel | FullStack Web Developer</title>
-    <meta name="title" content="Carlos Miguel | FullStack Web Developer" />
-    <meta
-      name="description"
-      content="Desarrollador con experiencia en JavaScript, Node.js, React, Astro entre otros. Especializado en crear aplicaciones rápidas, escalables y de alto rendimiento, optimizando tanto el frontend como el backend."
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://carlos-miguel.vercel.app/" />
-    <meta
-      property="og:title"
-      content="Carlos Miguel | FullStack Web Developer"
-    />
-    <meta
-      property="og:description"
-      content="Desarrollador con experiencia en JavaScript, Node.js, React, Astro entre otros. Especializado en crear aplicaciones rápidas, escalables y de alto rendimiento, optimizando tanto el frontend como el backend."
-    />
-    <meta property="og:image" content="/images/metatags.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://carlos-miguel.vercel.app/" />
-    <meta
-      property="twitter:title"
-      content="Carlos Miguel | FullStack Web Developer"
-    />
-    <meta
-      property="twitter:description"
-      content="Desarrollador con experiencia en JavaScript, Node.js, React, Astro entre otros. Especializado en crear aplicaciones rápidas, escalables y de alto rendimiento, optimizando tanto el frontend como el backend."
-    />
-    <meta property="twitter:image" content="/images/metatags.png" />
   </head>
   <body class="font-inter antialiased bg-white dark:bg-neutral-950">
     <SquareLines />
     <Header />
-    <slot />
-    <Footer />
+    <main class="max-w-xl mx-auto mb-12">
+      <slot />
+    </main>
     <script src="../assets/ts/main.ts"></script>
   </body>
 </html>

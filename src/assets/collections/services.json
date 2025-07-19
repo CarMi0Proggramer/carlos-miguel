@@ -1,0 +1,53 @@
+[
+	{
+		"title": "Desarrollo Frontend",
+		"description": "Me preocupo por crear interfaces agradables, diseñar con precisión los píxeles, crear diseños responsivos, prestar atención a la accesibilidad y optimizar el rendimiento para una experiencia de usuario excepcional.",
+		"technologies": [
+			{ "name": "TypeScript", "url": "/svgs/typescript.svg" },
+			{ "name": "Vite", "url": "/svgs/vitejs.svg" },
+			{ "name": "Angular", "url": "/svgs/angular.svg" },
+			{ "name": "Vue.js", "url": "/svgs/vue.svg" },
+			{
+				"name": "Astro",
+				"url": "/svgs/astro-light.svg",
+				"darkUrl": "/svgs/astro-dark.svg"
+			},
+			{ "name": "TailwindCSS", "url": "/svgs/tailwindcss.svg" }
+		]
+	},
+	{
+		"title": "Desarrollo Backend",
+		"description": "Me especializo en el diseño y desarrollo de APIs, asegurando robustez y escalabilidad con patrones de arquitectura como MVC y microservicios, además de alto rendimiento con reglas de caching y colas de procesamiento.",
+		"technologies": [
+			{
+				"name": "PHP",
+				"url": "/svgs/php-light.svg",
+				"darkUrl": "/svgs/php-dark.svg"
+			},
+			{ "name": "Laravel", "url": "/svgs/laravel.svg" },
+			{ "name": "TypeScript", "url": "/svgs/typescript.svg" },
+			{ "name": "NestJS", "url": "/svgs/nestjs.svg" },
+			{ "name": "MySQL", "url": "/svgs/mysql.svg" },
+			{ "name": "PostgreSQL", "url": "/svgs/postgresql.svg" },
+			{ "name": "MongoDB", "url": "/svgs/mongodb.svg" }
+		]
+	},
+	{
+		"title": "Administración de Servidores & DevOps",
+		"description": "Despliegue y configuración de aplicaciones en cualquier hosting que necesites, configuración de pipelines CI/CD y entornos de desarrollo compartibles.",
+		"technologies": [
+			{ "name": "Docker", "url": "/svgs/docker.svg" },
+			{ "name": "Linux", "url": "/svgs/linux.svg" },
+			{
+				"name": "GitHub",
+				"url": "/svgs/github-light.svg",
+				"darkUrl": "/svgs/github-dark.svg"
+			},
+			{
+				"name": "Nx",
+				"url": "/svgs/nx-light.svg",
+				"darkUrl": "/svgs/nx-dark.svg"
+			}
+		]
+	}
+]

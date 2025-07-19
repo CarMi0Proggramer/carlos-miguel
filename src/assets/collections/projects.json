@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Bombero Callejero",
+		"description": "Plataforma web educativa para bomberos en España. Ofrece mapas detallados de callejeros, junto con tests interactivos que evalúan conocimientos mediante preguntas basadas en los mapas. Proyecto enfocado en la preparación y formación profesional del cuerpo de bomberos.",
+		"image": "/images/projects/bombero-callejero.webp",
+		"url": "https://www.bomberocallejero.es",
+		"date": "Enero de 2025 - Presente"
+	},
+	{
+		"name": "GotoSend",
+		"description": "Desarrollo integral de un sitio web para la venta de recargas a Cuba y a nivel internacional, envío de remesas a cubanos y comercialización de tarjetas de regalo.",
+		"image": "/images/projects/gotosend.webp",
+		"url": "https://gotosend.com",
+		"date": "Agosto de 2024 - Diciembre de 2024"
+	}
+]
