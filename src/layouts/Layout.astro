@@ -1,8 +1,8 @@
 ---
 import "../assets/styles/global.css";
 import "../assets/styles/main.css";
-import { SEO } from "astro-seo";
 import { ClientRouter } from "astro:transitions";
+import { SEO } from "astro-seo";
 import Header from "../components/Header.astro";
 import SquareLines from "../components/SquareLines.astro";
 ---
@@ -17,6 +17,7 @@ import SquareLines from "../components/SquareLines.astro";
     <SEO
       title="Carlos Miguel | Desarrollador Web FullStack"
       canonical={Astro.url.href}
+      description="Desarrollador FullStack. Freelancer. Creador de contenido educativo. Cubano."
     />
     <ClientRouter />
 

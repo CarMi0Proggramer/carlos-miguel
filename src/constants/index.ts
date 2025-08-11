@@ -53,3 +53,5 @@ export const COLORS = {
 		"dark:hover:text-green-800",
 	],
 };
+
+export const youtubeApiUrl = "https://www.googleapis.com/youtube/v3";
