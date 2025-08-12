@@ -121,7 +121,7 @@
       </h2>
       <div
         v-html="formattedDescription"
-        class="text-base font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-2 overflow-hidden [&>a]:underline [&>a]:text-neutral-900 [&>a]:dark:text-neutral-300 [&>code]:overflow-x-auto [&>code]:flex"
+        class="text-base font-medium text-neutral-600 dark:text-neutral-400 flex flex-col gap-2 overflow-hidden [&>p>a]:underline [&>p>a]:text-neutral-900 [&>p>a]:dark:text-neutral-300 [&>pre>code]:overflow-x-auto [&>pre>code]:flex"
       ></div>
     </div>
   </template>
