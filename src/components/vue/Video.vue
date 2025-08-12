@@ -39,7 +39,6 @@
       :title="video!.snippet.title"
       :src="`youtube/${video!.id}`"
       :playsInline="true"
-      :autoPlay="true"
     >
       <media-provider>
         <media-poster
