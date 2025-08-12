@@ -38,8 +38,8 @@
       class="w-full aspect-video bg-neutral-800 text-white overflow-hidden rounded-md"
       :title="video!.snippet.title"
       :src="`youtube/${video!.id}`"
-      plays-inline
-      auto-play
+      :playsInline="true"
+      :autoPlay="true"
     >
       <media-provider>
         <media-poster
