@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between items-center mb-4">
     <a
-      href="/videos"
+      :href="`/${lang}/videos`"
       class="rounded-md px-4 py-2 bg-neutral-200 inline-flex gap-2 items-center text-neutral-900 dark:text-white font-semibold dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800"
     >
       <svg
@@ -21,7 +21,7 @@
           d="m15 19-7-7 7-7"
         />
       </svg>
-      Regresar</a
+      {{ translations?.videos.comeBackButtonText }}</a
     >
   </div>
   <template v-if="videoLoading || channelLoading">
@@ -29,9 +29,7 @@
     <VideoStatisticsSkeleton />
   </template>
   <template v-else-if="videoError || channelError">
-    <ErrorMessage
-      message="Error al cargar los datos, por favor, vuelva más tarde."
-    />
+    <ErrorMessage :message="translations?.errorMessages.videoMessage ?? ''" />
   </template>
   <template v-else>
     <media-player
@@ -63,7 +61,8 @@
           <p
             class="text-sm font-medium leading-tight text-neutral-600 dark:text-neutral-400"
           >
-            {{ channel!.statistics.subscriberCount }} suscriptores
+            {{ channel!.statistics.subscriberCount }}
+            {{ translations?.videos.subscribersText }}
           </p>
         </div>
       </div>
@@ -132,11 +131,20 @@ import VideoSkeleton from "./VideoSkeleton.vue";
 import VideoStatisticsSkeleton from "./VideoStatisticsSkeleton.vue";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
-import { computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useVideo } from "../../composables/useVideo";
 import { useChannel } from "../../composables/useChannel";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const props = defineProps<{ videoId: string }>();
+const lang = ref<ReturnType<typeof getLangFromUrl>>("es");
+const translations = ref<ReturnType<typeof useTranslations>>();
+
+onMounted(() => {
+  const currentUrl = new URL(window.location.href);
+  lang.value = getLangFromUrl(currentUrl);
+  translations.value = useTranslations(lang.value);
+});
 
 const {
   isLoading: videoLoading,

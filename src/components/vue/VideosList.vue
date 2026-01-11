@@ -9,7 +9,7 @@
     </template>
     <template v-else-if="error">
       <ErrorMessage
-        message="No se pudieron cargar los videos en este momento."
+        :message="translations?.errorMessages.videosMessage ?? ''"
       />
     </template>
     <template v-else>
@@ -19,7 +19,7 @@
         >
           <a
             class="rounded-md aspect-video flex flex-col"
-            :href="`/videos/${video.resourceId.videoId}`"
+            :href="`/${lang}/videos/${video.resourceId.videoId}`"
           >
             <div
               v-if="isRecentVideo(video.publishedAt)"
@@ -66,7 +66,7 @@
                 >
                   <path d="M8 5v14l11-7z" />
                 </svg>
-                Ver ahora
+                {{ translations?.videos.watchNowButtonText }}
               </button>
             </div>
           </a>
@@ -76,10 +76,21 @@
   </ul>
 </template>
 <script lang="ts" setup>
+import { ref, onMounted } from "vue";
 import { isRecentVideo } from "../../assets/ts/videos";
 import { useVideos } from "../../composables/useVideos";
+import { useTranslations, getLangFromUrl } from "../../i18n/utils";
 import ErrorMessage from "./ErrorMessage.vue";
 import VideoSkeleton from "./VideoSkeleton.vue";
 
 const { isLoading, error, videos } = useVideos();
+const lang = ref<ReturnType<typeof getLangFromUrl>>("es");
+const translations = ref<ReturnType<typeof useTranslations>>();
+
+onMounted(() => {
+  const currentUrl = new URL(window.location.href);
+
+  lang.value = getLangFromUrl(currentUrl);
+  translations.value = useTranslations(lang.value);
+});
 </script>

@@ -59,6 +59,20 @@ export const translations = {
       testimonials: "Testimonios de clientes",
       contact: "Pongámonos en contacto",
     },
+    videos: {
+      header: "Videos",
+      description:
+        "Acá están los últimos 5 videos publicados en mi canal de YouTube. Si te gusta lo que ves te animo a visitar mi canal o si tienes alguna sugerencia igualmente agradezco el feedback.",
+      comeBackButtonText: "Regresar",
+      subscribersText: "suscriptores",
+      watchNowButtonText: "Ver Ahora",
+    },
+    errorMessages: {
+      header: "Oops! Algo salió mal",
+      videosMessage: "No se pudieron cargar los videos en este momento.",
+      videoMessage: "Error al cargar los datos, por favor, vuelva más tarde.",
+      reloadPageText: "Recargar Página",
+    },
   },
   br: {
     occupation:
@@ -119,6 +133,20 @@ export const translations = {
       projects: "Projetos mais recentes",
       testimonials: "Depoimentos de clientes",
       contact: "Vamos entrar em contato",
+    },
+    videos: {
+      header: "Vídeos",
+      description:
+        "Aqui estão os últimos 5 vídeos publicados no meu canal do YouTube. Se gostou do que vê, convido você a visitar meu canal ou, se tiver alguma sugestão, agradeço o feedback.",
+      comeBackButtonText: "Voltar",
+      subscribersText: "inscritos",
+      watchNowButtonText: "Assistir Agora",
+    },
+    errorMessages: {
+      header: "Oops! Algo deu errado",
+      videosMessage: "Não foi possível carregar os vídeos no momento.",
+      videoMessage: "Erro ao carregar os dados, por favor, tente mais tarde.",
+      reloadPageText: "Recarregar Página",
     },
   },
 } as const;
