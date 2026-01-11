@@ -1,9 +1,20 @@
-[
-  {
-    "author": "Mariano Díez Fernández",
-    "position": "Fundador de Bombero Callejero",
-    "body": "Llevo ya medio año trabajando con Carlos, y solo tengo palabras de agradecimiento. Siempre demuestra una atención excepcional, mucha paciencia y un profesionalismo increíble. No importa el desafío, lo resuelve con eficacia y buena actitud. ¡Es un crack en lo que hace!",
-    "contact": "mailto:pcdiez@gmail.com",
-    "image": "/images/testimonials/Mariano-Diez.webp"
-  }
-]
+{
+  "es": [
+    {
+      "author": "Mariano Díez Fernández",
+      "position": "Fundador de Bombero Callejero",
+      "body": "Solo tengo palabras de agradecimiento. Siempre demuestra una atención excepcional, mucha paciencia y un profesionalismo increíble. No importa el desafío, lo resuelve con eficacia y buena actitud. ¡Es un crack en lo que hace!",
+      "contact": "mailto:pcdiez@gmail.com",
+      "image": "/images/testimonials/Mariano-Diez.webp"
+    }
+  ],
+  "br": [
+    {
+      "author": "Mariano Díez Fernández",
+      "position": "Fundador da Bombeiro Callejero",
+      "body": "Só tenho palavras de agradecimento. Sempre demonstra uma atenção excepcional, muita paciência e um profissionalismo incrível. Não importa o desafio, ele o resolve com eficácia e boa atitude.",
+      "contact": "mailto:pcdiez@gmail.com",
+      "image": "/images/testimonials/Mariano-Diez.webp"
+    }
+  ]
+}

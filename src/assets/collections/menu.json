@@ -1,10 +1,22 @@
-[
-	{
-		"name": "Inicio",
-		"url": "/"
-	},
-	{
-		"name": "Videos",
-		"url": "/videos"
-	}
-]
+{
+  "es": [
+    {
+      "name": "Inicio",
+      "url": "/es"
+    },
+    {
+      "name": "Videos",
+      "url": "/es/videos"
+    }
+  ],
+  "br": [
+    {
+      "name": "Começo",
+      "url": "/br"
+    },
+    {
+      "name": "Vídeos",
+      "url": "/br/videos"
+    }
+  ]
+}

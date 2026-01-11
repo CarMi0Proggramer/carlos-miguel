@@ -2,24 +2,25 @@
 import { Image } from "astro:assets";
 import services from "../../assets/collections/services.json";
 import Card from "../Card.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translations = useTranslations(lang);
 ---
 
 <section class="px-7 lg:px-0">
   <div
     class="flex justify-between text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
-    <h2>Mis Servicios</h2>
-    <span>$5/hora</span>
+    <h2>{translations.services.header}</h2>
+    <span>{translations.services.price}</span>
   </div>
   <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
-    Soy un especialista en crear arquitecturas backend robustas, con amplia
-    experiencia en frontend y DevOps. Transformo ideas en sistemas escalables y
-    eficientes, combinando código limpio con las mejores prácticas de la
-    industria.
+    {translations.services.description}
   </p>
   <div class="grid w-full grid-cols-1 gap-7 mt-8 text-pretty">
     {
-      services.map(({ title, description, technologies }) => (
+      services[lang].map(({ title, description, technologies }) => (
         <Card>
           <h2 class="text-lg font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">
             {title}

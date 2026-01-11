@@ -1,46 +1,38 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const translations = useTranslations(lang);
 ---
 
 <section class="px-7 lg:px-0 md:mt-7">
   <h2
     class="flex justify-between text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
-    Más Proyectos
+    {translations.experience.moreProjects.header}
   </h2>
   <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
-    Hay mucho más pero no quiero alargar más la página. Igualmente puedes ver
-    otros proyectos en mi <a
-      class="underline"
-      href="https://github.com/CarMi0Proggramer">perfil de GitHub</a
-    >. Aquí están algunos de los más destacados:
+    {translations.experience.moreProjects.description}
   </p>
-  <ul
-    class="list-disc text-neutral-600 dark:text-neutral-400 text-pretty flex flex-col px-4"
-  >
-    <li>
-      <a
-        href="https://d-kanto.onrender.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="font-semibold underline">D-Kanto</a
-      >, un sitio web de comercio electrónico.
-    </li>
-    <li>
-      <a
-        href="https://d-kanto-admin.onrender.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="font-semibold underline">D-Kanto Admins</a
-      >, un panel de administración para D-Kanto.
-    </li>
-    <li>
-      <a
-        href="https://github.com/CarMi0Proggramer/leaflet-labels-renderer"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="font-semibold underline">LabelsRenderer</a
-      >, un plugin para renderizar etiquetas en mapas de Leaflet.
-    </li>
-  </ul>
 </section>
+<ul
+  class="list-disc text-neutral-600 dark:text-neutral-400 text-pretty flex flex-col px-4"
+>
+  {
+    translations.experience.moreProjects.projects.map(
+      (project: { url: string; label: string; description: string }) => (
+        <li>
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold underline"
+          >
+            {project.label}
+          </a>
+          , {project.description}
+        </li>
+      )
+    )
+  }
+</ul>

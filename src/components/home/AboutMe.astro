@@ -1,22 +1,21 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translations = useTranslations(lang);
+---
+
 <section class="px-7 lg:px-0 md:mt-7">
   <h2
     class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
-    Sobre Mí
+    {translations.about.header}
   </h2>
-  <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
-    En 2023 decidí comenzar a estudiar programación por curiosidad en una app
-    llamada SoloLearn donde conocí el mundo del desarrollo web y la programación
-    en JavaScript.
-  </p>
-  <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
-    Desde entonces he aprendido múltiples tecnologías y herramientas, DevOps y
-    más! Amo lo que hago y siempre estoy buscando aprender y crecer como
-    desarrollador.
-  </p>
-  <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
-    También tengo un pequeño gusto por la educación y la enseñanza, lo que me
-    impulsó a crear un canal de YouTube hace ya alrededor de un año donde
-    comparto mis conocimientos sobre desarrollo web y programación en general.
-  </p>
+  {
+    translations.about.paragraphs.map((paragraph: string) => (
+      <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
+        {paragraph}
+      </p>
+    ))
+  }
 </section>

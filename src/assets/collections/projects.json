@@ -1,16 +1,34 @@
-[
-	{
-		"name": "Bombero Callejero",
-		"description": "Plataforma web educativa para bomberos en España. Ofrece mapas detallados de callejeros, junto con tests interactivos que evalúan conocimientos mediante preguntas basadas en los mapas. Proyecto enfocado en la preparación y formación profesional del cuerpo de bomberos.",
-		"image": "/images/projects/bombero-callejero.webp",
-		"url": "https://www.bomberocallejero.es",
-		"date": "Enero de 2025 - Presente"
-	},
-	{
-		"name": "GotoSend",
-		"description": "Desarrollo integral de un sitio web para la venta de recargas a Cuba y a nivel internacional, envío de remesas a cubanos y comercialización de tarjetas de regalo.",
-		"image": "/images/projects/gotosend.webp",
-		"url": "https://gotosend.com",
-		"date": "Agosto de 2024 - Diciembre de 2024"
-	}
-]
+{
+  "es": [
+    {
+      "name": "Bombero Callejero",
+      "description": "Plataforma web educativa para bomberos en España. Ofrece mapas detallados de callejeros, junto con tests interactivos que evalúan conocimientos mediante preguntas basadas en los mapas. Proyecto enfocado en la preparación y formación profesional del cuerpo de bomberos.",
+      "image": "/images/projects/bombero-callejero.webp",
+      "url": "https://www.bomberocallejero.es",
+      "date": "Enero de 2025 - Presente"
+    },
+    {
+      "name": "GotoSend",
+      "description": "Desarrollo integral de un sitio web para la venta de recargas a Cuba y a nivel internacional, envío de remesas a cubanos y comercialización de tarjetas de regalo.",
+      "image": "/images/projects/gotosend.webp",
+      "url": "https://gotosend.com",
+      "date": "Agosto de 2024 - Diciembre de 2024"
+    }
+  ],
+  "br": [
+    {
+      "name": "Bombero Callejero",
+      "description": "Plataforma web educativa para bombeiros na Espanha. Oferece mapas detalhados de ruas, junto com testes interativos que avaliam conhecimentos através de perguntas baseadas nos mapas. Projeto focado na preparação e formação profissional do corpo de bombeiros.",
+      "image": "/images/projects/bombero-callejero.webp",
+      "url": "https://www.bomberocallejero.es",
+      "date": "Janeiro de 2025 - Presente"
+    },
+    {
+      "name": "GotoSend",
+      "description": "Desenvolvimento integral de um site para venda de recargas para Cuba e internacionalmente, envio de remessas para cubanos e comercialização de cartões de presente.",
+      "image": "/images/projects/gotosend.webp",
+      "url": "https://gotosend.com",
+      "date": "Agosto de 2024 - Dezembro de 2024"
+    }
+  ]
+}

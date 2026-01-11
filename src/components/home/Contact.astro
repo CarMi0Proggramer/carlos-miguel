@@ -1,20 +1,21 @@
 ---
 import SocialLinks from "../SocialLinks.astro";
 import Button from "../buttons/Button.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translations = useTranslations(lang);
 ---
 
 <section class="px-7 lg:px-0 md:mt-7">
   <div
     class="flex justify-between text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
-    <h2>Contacto</h2>
-    <Button color="green" text="Disponible" />
+    <h2>{translations.contact.header}</h2>
+    <Button color="green" text={translations.contact.availability} />
   </div>
   <p class="mt-4 text-base text-neutral-600 dark:text-neutral-400 text-pretty">
-    No dudes en ponerte en contacto si estás buscando un desarrollador, tienes
-    alguna pregunta o simplemente quieres conectar. Puede que pueda aceptar
-    nuevos proyectos dependiendo de mi disponibilidad (indicador en la parte
-    superior derecha).
+    {translations.contact.description}
   </p>
   <div class="mt-4">
     <a

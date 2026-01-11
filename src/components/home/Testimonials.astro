@@ -2,21 +2,24 @@
 import { Image } from "astro:assets";
 import testimonials from "../../assets/collections/testimonials.json";
 import Card from "../Card.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translations = useTranslations(lang);
 ---
 
 <section class="max-w-4xl mx-auto px-7 lg:px-0">
   <h2
     class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
-    Testimonios
+    {translations.testimonials.header}
   </h2>
   <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-    Opiniones personales de clientes sobre mi trabajo y personas con las que he
-    colaborado.
+    {translations.testimonials.description}
   </p>
   <div class="grid w-full grid-cols-1 gap-7 mt-7">
     {
-      testimonials.map(({ author, position, body, contact, image }) => (
+      testimonials[lang].map(({ author, position, body, contact, image }) => (
         <Card>
           <blockquote class="text-base text-neutral-600 dark:text-neutral-400 text-pretty">
             {body}

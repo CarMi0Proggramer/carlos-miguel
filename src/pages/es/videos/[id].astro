@@ -1,0 +1,14 @@
+---
+import Video from "../../../components/vue/Video.vue";
+import Layout from "../../../layouts/Layout.astro";
+
+export const prerender = false;
+
+const { id } = Astro.params;
+---
+
+<Layout>
+  <section class="relative z-20 my-12 px-7 lg:px-0">
+    <Video client:load videoId={id!} />
+  </section>
+</Layout>
