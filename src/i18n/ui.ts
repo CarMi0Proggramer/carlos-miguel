@@ -29,6 +29,7 @@ export const translations = {
     },
     experience: {
       header: "Experiencia",
+      goToSiteButtonText: "Ir al Sitio Web",
       moreProjects: {
         header: "Más Proyectos",
         description:
@@ -104,6 +105,7 @@ export const translations = {
     },
     experience: {
       header: "Experiência",
+      goToSiteButtonText: "Acessar o site",
       moreProjects: {
         header: "Mais Projetos",
         description:
