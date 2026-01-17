@@ -14,7 +14,6 @@ export const translations = {
       header: "Mis Servicios",
       description:
         "Soy un especialista en crear arquitecturas backend robustas, con amplia experiencia en frontend y DevOps. Transformo ideas en sistemas escalables y eficientes, combinando código limpio con las mejores prácticas de la industria.",
-      price: "$5/hora",
     },
     contact: {
       header: "Contacto",
@@ -91,7 +90,6 @@ export const translations = {
       header: "Meus Serviços",
       description:
         "Sou especialista em criar arquiteturas backend robustas, com ampla experiência em frontend e DevOps. Transformo ideias em sistemas escaláveis e eficientes, combinando código limpo com as melhores práticas da indústria.",
-      price: "$5/hora",
     },
     contact: {
       header: "Contato",
