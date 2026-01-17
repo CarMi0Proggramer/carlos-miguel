@@ -67,6 +67,7 @@ export const translations = {
       comeBackButtonText: "Regresar",
       subscribersText: "suscriptores",
       watchNowButtonText: "Ver Ahora",
+      newVideoButtonText: "Nuevo",
     },
     errorMessages: {
       header: "Oops! Algo salió mal",
@@ -143,6 +144,7 @@ export const translations = {
       comeBackButtonText: "Voltar",
       subscribersText: "inscritos",
       watchNowButtonText: "Assistir Agora",
+      newVideoButtonText: "Novo",
     },
     errorMessages: {
       header: "Oops! Algo deu errado",
