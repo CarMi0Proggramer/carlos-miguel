@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import testimonials from "../../assets/collections/testimonials.json";
-import Card from "../Card.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Card from "../Card.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const translations = useTranslations(lang);

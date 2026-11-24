@@ -76,10 +76,10 @@
   </ul>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { isRecentVideo } from "../../assets/ts/videos";
 import { useVideos } from "../../composables/useVideos";
-import { useTranslations, getLangFromUrl } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import ErrorMessage from "./ErrorMessage.vue";
 import VideoSkeleton from "./VideoSkeleton.vue";
 
@@ -88,9 +88,9 @@ const lang = ref<ReturnType<typeof getLangFromUrl>>("es");
 const translations = ref<ReturnType<typeof useTranslations>>();
 
 onMounted(() => {
-  const currentUrl = new URL(window.location.href);
+	const currentUrl = new URL(window.location.href);
 
-  lang.value = getLangFromUrl(currentUrl);
-  translations.value = useTranslations(lang.value);
+	lang.value = getLangFromUrl(currentUrl);
+	translations.value = useTranslations(lang.value);
 });
 </script>

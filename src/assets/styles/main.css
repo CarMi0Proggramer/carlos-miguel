@@ -15,6 +15,7 @@
 }
 
 html.dark #themeToggle:hover .horizon {
+	/* biome-ignore lint/complexity/noImportantStyles: must override Tailwind border utilities on the toggle */
 	border-color: #718096 !important;
 }
 

@@ -42,12 +42,12 @@ const props = defineProps<{ message: string }>();
 const translations = ref<ReturnType<typeof useTranslations>>();
 
 onMounted(() => {
-  const currentUrl = new URL(window.location.href);
-  const lang = getLangFromUrl(currentUrl);
-  translations.value = useTranslations(lang);
+	const currentUrl = new URL(window.location.href);
+	const lang = getLangFromUrl(currentUrl);
+	translations.value = useTranslations(lang);
 });
 
 function reloadPage() {
-  location.reload();
+	location.reload();
 }
 </script>
