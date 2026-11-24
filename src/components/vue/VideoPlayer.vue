@@ -126,42 +126,42 @@
 </template>
 <script setup lang="ts">
 import "vidstack/bundle";
-import ErrorMessage from "./ErrorMessage.vue";
-import VideoSkeleton from "./VideoSkeleton.vue";
-import VideoStatisticsSkeleton from "./VideoStatisticsSkeleton.vue";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
 import { computed, onMounted, ref } from "vue";
-import { useVideo } from "../../composables/useVideo";
 import { useChannel } from "../../composables/useChannel";
+import { useVideo } from "../../composables/useVideo";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import ErrorMessage from "./ErrorMessage.vue";
+import VideoSkeleton from "./VideoSkeleton.vue";
+import VideoStatisticsSkeleton from "./VideoStatisticsSkeleton.vue";
 
 const props = defineProps<{ videoId: string }>();
 const lang = ref<ReturnType<typeof getLangFromUrl>>("es");
 const translations = ref<ReturnType<typeof useTranslations>>();
 
 onMounted(() => {
-  const currentUrl = new URL(window.location.href);
-  lang.value = getLangFromUrl(currentUrl);
-  translations.value = useTranslations(lang.value);
+	const currentUrl = new URL(window.location.href);
+	lang.value = getLangFromUrl(currentUrl);
+	translations.value = useTranslations(lang.value);
 });
 
 const {
-  isLoading: videoLoading,
-  error: videoError,
-  video,
+	isLoading: videoLoading,
+	error: videoError,
+	video,
 } = useVideo(props.videoId);
 
 const {
-  isLoading: channelLoading,
-  error: channelError,
-  channel,
+	isLoading: channelLoading,
+	error: channelError,
+	channel,
 } = useChannel();
 
 const formattedDescription = computed(() => {
-  if (!video.value) return "";
+	if (!video.value) return "";
 
-  const text = marked(video.value.snippet.description, { async: false });
-  return DOMPurify.sanitize(text);
+	const text = marked(video.value.snippet.description, { async: false });
+	return DOMPurify.sanitize(text);
 });
 </script>

@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import projects from "../../assets/collections/projects.json";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import LinkButton from "../buttons/LinkButton.astro";
 import MoreProjects from "./MoreProjects.astro";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translations = useTranslations(lang);

@@ -1,7 +1,7 @@
 ---
-import SocialLinks from "../SocialLinks.astro";
-import Button from "../buttons/Button.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Button from "../buttons/Button.astro";
+import SocialLinks from "../SocialLinks.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const translations = useTranslations(lang);

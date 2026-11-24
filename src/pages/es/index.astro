@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import SocialLinks from "../../components/SocialLinks.astro";
 import AboutMe from "../../components/home/AboutMe.astro";
 import Contact from "../../components/home/Contact.astro";
 import Projects from "../../components/home/Projects.astro";
 import Separator from "../../components/home/Separator.astro";
 import Services from "../../components/home/Services.astro";
 import Testimonials from "../../components/home/Testimonials.astro";
-import Layout from "../../layouts/Layout.astro";
+import SocialLinks from "../../components/SocialLinks.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Layout from "../../layouts/Layout.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const translations = useTranslations(lang);
